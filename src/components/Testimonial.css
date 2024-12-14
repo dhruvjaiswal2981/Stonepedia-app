@@ -1,0 +1,132 @@
+#testimonials {
+    padding: 60px 0;
+    background-color: #f7f7f7; /* Lighter background for a fresh look */
+    text-align: center;
+  }
+  
+  #testimonials h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    border-radius: 20px; /* More rounded for modern look */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.05); /* Slight brightening effect on hover */
+  }
+  
+  .testimonial-card .testimonial-img-container {
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #e1e1e1;
+    width: 120px;
+    height: 120px;
+    box-sizing: border-box;
+  }
+  
+  .testimonial-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover .testimonial-img-container img {
+    transform: scale(1.1); /* Zoom effect on image */
+  }
+  
+  .testimonial-card h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .testimonial-card .role {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-card .message {
+    color: #34495e;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .rating {
+    margin-bottom: 20px;
+  }
+  
+  .star {
+    color: #f39c12; /* Gold color for the stars */
+    font-size: 1.4rem;
+  }
+  
+  .expert-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #38b2ac;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+  
+  .testimonial-card:hover .expert-badge {
+    opacity: 1; /* Badge appears when hovering over the card */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-50%) translateY(10px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-grid {
+      grid-template-columns: 1fr 1fr; /* Two items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-grid {
+      grid-template-columns: 1fr; /* One item per row on mobile */
+    }
+  }
+  

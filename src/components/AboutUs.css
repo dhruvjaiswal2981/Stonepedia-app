@@ -1,0 +1,153 @@
+/* About Us Section */
+#about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, #222, #444); /* Dark theme gradient to match navbar */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Title */
+#about h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    color: #fff; /* White for the title */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Paragraph Styling */
+#about p {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: #E0E0E0; /* Light gray for text to stand out against the dark background */
+    line-height: 1.75;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+/* Grid Layout */
+#about .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adaptive grid */
+    gap: 30px;
+    margin-top: 60px;
+    animation: fadeInUp 1.8s ease-out forwards;
+}
+
+/* Card Styling */
+#about .grid .card {
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Card Hover Effect */
+#about .grid .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+#about .grid .card i {
+    font-size: 55px;
+    margin-bottom: 25px;
+    color: #38b2ac; /* Light teal for icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon Hover Effect */
+#about .grid .card:hover i {
+    color: #319795; /* Darker teal for hover effect */
+    transform: scale(1.1);
+}
+
+/* Card Heading (h3) */
+#about .grid .card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e74c3c; /* Dark gray for subheading */
+}
+
+/* Card Text (p) */
+#about .grid .card p {
+    color: #555; /* Dark gray for card text */
+}
+
+/* Font Styling for Semibold Text */
+#about .font-semibold {
+    font-weight: 600;
+    color: #e74c3c; /* Dark gray for emphasized text */
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for Fade In Up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    #about h2 {
+        font-size: 3rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2.8rem;
+    }
+
+    #about .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #about .p-6 {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about h2 {
+        font-size: 2.5rem;
+    }
+
+    #about .text-lg {
+        font-size: 1rem;
+    }
+}

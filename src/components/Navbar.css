@@ -1,0 +1,218 @@
+/* General Navbar Styling */
+.navbar {
+    background-color: #1c2833;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo Styling */
+  .navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    cursor: pointer;
+  }
+  
+  /* Navigation Links */
+  .nav-links ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-links ul li a {
+    color: #ecf0f1;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #e74c3c;
+  }
+  
+  /* Search Bar */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 1rem;
+    color: #2c3e50;
+    background: none;
+    width: 250px;
+  }
+  
+  .search-bar input::placeholder {
+    color: #7f8c8d;
+  }
+  
+  .search-icon {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .search-icon:hover {
+    color: #e74c3c;
+  }
+  
+  /* Cart Icon */
+  .cart {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart-icon {
+    font-size: 1.8rem;
+    color: #ecf0f1;
+    transition: color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    color: #e74c3c;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: #ecf0f1;
+    cursor: pointer;
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #34495e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 999;
+  }
+  
+  .mobile-menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .mobile-menu ul li {
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet View */
+  @media screen and (max-width: 1024px) {
+    .navbar {
+      padding: 15px 20px;
+    }
+  
+    .nav-links ul {
+      display: flex;
+      gap: 15px;
+    }
+  
+    .search-bar input {
+      width: 200px;
+    }
+  }
+  
+  /* Mobile View */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px;
+    }
+  
+    .nav-links ul {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-actions {
+      gap: 10px;
+    }
+  
+    .search-bar input {
+      width: 180px;
+    }
+  
+    .cart-icon {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Small Mobile View */
+  @media screen and (max-width: 480px) {
+    .navbar {
+      padding: 8px 12px;
+    }
+  
+    .search-bar input {
+      width: 150px;
+    }
+  
+    .cart-icon {
+      font-size: 1.4rem;
+    }
+  
+    .mobile-menu ul {
+      gap: 10px;
+    }
+  }
+  
+  /* Mobile Menu (Hamburger) */
+  @media screen and (max-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+  
+    .hamburger.active + .mobile-menu {
+      display: flex;
+    }
+  }
+  
+  
